@@ -103,6 +103,38 @@ window.addEventListener('DOMContentLoaded', function(){
         document.body.style.overflow = 'visible'; // отключить запрет прокрутки во время включенного окна
     });
     
+    // homeWork 1
+
+    // let age = document.getElementById('age');
+    
+    // function showUser(surname, name) {
+    //          alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+    // }
+    
+    // showUser.apply(age, ["Горький","Максим"]);
+
+    // homeWork 2
+
+    // class Options{
+    //     constructor (height, width, bg, fontSize, textAlign) {
+    //         this.height = height;
+    //         this.width = width;
+    //         this.bg  = bg;
+    //         this.fontSize = fontSize;
+    //         this.textAlign = textAlign;
+    //     }
+    //     createDiv() {
+    //         let elemdiv = document.createElement('div');
+    //         document.body.appendChild(elemdiv);
+    //         let parem = `height:${this.height}px; width:${this.width}px; background-color:${this.bg}; font-size:${this.fontSize}px; text-align:${this.textAlign}`;
+    //         elemdiv.style.cssText = parem;
+    //     }
+    // }
+
+    // const item = new Options(300, 350, 'red', 14, 'cenret');
+    // item.createDiv();
+
+
 
 
 
