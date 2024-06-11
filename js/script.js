@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function(){
         let hours = timer.querySelector('.hours');
         let minutes = timer.querySelector('.minutes');
         let seconds = timer.querySelector('.seconds');
-        timeInterval = setInterval(updateClock, 1000);
+        let timeInterval = setInterval(updateClock, 1000);
 
         function updateClock() {
             let t = getTimeRemaining(endtime);
@@ -74,13 +74,36 @@ window.addEventListener('DOMContentLoaded', function(){
             seconds.textContent = addZero(t.seconds);
 
             if (t.total <= 0) {
+                clearInterval(timeInterval);
                 hours.textContent = '00';
                 minutes.textContent = '00';
                 seconds.textContent = '00';
-                clearInterval(timeInterval);
+                
             };
         };
     };
 
     setClock('timer', deadLine);
+
+     // created a modal window
+
+    let btnMore = document.querySelector('.more');
+    let modalWindow = document.querySelector('.overlay');
+    let btnClose = document.querySelector('.popup-close');
+
+    btnMore.addEventListener('click', function(){
+        modalWindow.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden'; // запретить прокрутку во время включенного окна
+    });
+
+    btnClose.addEventListener('click', function(){
+        modalWindow.style.display = 'none';
+        btnMore.classList.remove('more-splash');
+        document.body.style.overflow = 'visible'; // отключить запрет прокрутки во время включенного окна
+    });
+    
+
+
+
 });
